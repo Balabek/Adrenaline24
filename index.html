@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=1024, user-scalable = no">-->
+    <title>Adrenaline 24 (Главная)</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,300,600,600italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick-theme.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/_adrenaline.css" rel="stylesheet">
+    <link href="css/_mq.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+</head>
+<body id="home">
+<div class="main">
+
+    <div class="main_header_area">
+        <div class="topmost_orange"></div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="language_picker_holder_homepage_desktop hidden-xs">
+                    <select id="lang_selekta_homepage">
+                        <option>РУС</option>
+                        <option>ENG</option>
+                    </select>
+                </div>
+
+                <div class="main_logo_holder">
+                    <img src="img/main_logo.png" class="adr24_main_logo img-responsive animated bounceInDown">
+                    <span class="country_flag_homepage_desktop" style="background: url('img/rusflag.png') center center no-repeat; background-size: cover;"></span>
+                </div>
+
+                <nav class="navbar navbar-default adrenavbar">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#adr24_navbar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="adr24_navbar">
+                        <ul class="nav navbar-nav adrenav">
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Правила</a></li>
+                            <!--<li><a href="#">Квесты</a></li>-->
+                            <!--<li><a href="#">Паранормальное явление</a></li>-->
+                            <!--<li><a href="#">Запретный эксперимент</a></li>-->
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Франшиза</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <!--<li><a href="#">Профиль</a></li>-->
+                        </ul>
+                        <div class="authorize_holder_main">
+                            <a href="#" class="authorize_me_btn">Авторизоваться</a>
+                            <div class="language_picker_holder_mobile visible-xs">
+                                <select id="lang_selekta">
+                                    <option>РУС</option>
+                                    <option>ENG</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+
+                <div id="main_carousel" class="carousel-fade carousel slide" data-ride="carousel">
+                    <div class="h_banner">
+                        <h2 class="header_promo_ttl">
+                            Предлагаем серию лучших атмосферных квестов в реальности
+                        </h2>
+                        <button class="btn btn-default quest_reserve_btn hvr-rectangle-out center-block">Забронировать Квест</button>
+                        <p class="twentyfourseven center-block">[мы работаем 24 часа, 7 дней в неделю]</p>
+                    </div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="tint">
+                                <img src="img/mainslide_001.jpg" class="main_slide_img" width="100%">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tint">
+                                <img src="img/mainslide_002.jpg" class="main_slide_img" width="100%">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tint">
+                                <img src="img/mainslide_003.jpg" class="main_slide_img" width="100%">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tint">
+                                <img src="img/mainslide_004.jpg" class="main_slide_img" width="100%">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tint">
+                                <img src="img/mainslide_005.jpg" class="main_slide_img" width="100%">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tint">
+                                <img src="img/mainslide_006.jpg" class="main_slide_img" width="100%">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tint">
+                                <img src="img/mainslide_007.jpg" class="main_slide_img" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottommost_blu"></div>
+    </div> <!-- Main header area END -->
+
+    <div class="best_reality_quests_area">
+        <div class="container">
+            <div class="row">
+                <h2 class="best_quests_ttl">Лучшие квесты в реальности</h2>
+                <p class="best_quests_info">
+                    Квесты в реальности сравнимы с прохождением компьютерной игры, только Вы находитесь внутри
+                    самой игры - все можно потрогать, почувствовать, получить незабываемые яркие впечатления. Для
+                    прохождения квеста Вам необходимо проявить смекалку, неординарное мышление, внимательность к
+                    деталям. Попробуйте, Вам понравится.
+                </p>
+                <div class="best_quest_boxes_holder">
+
+                    <div class="best_quest_box quest_1 col-sm-6" style="background: url('img/mainslide_001.jpg') center center no-repeat; background-size: cover;">
+                        <span class="color_splash lilac" style="background: url('img/lilac_splash.png') left no-repeat; background-size: contain;"></span>
+                        <div class="best_quest_box_info_holder">
+                            <h2 class="best_quests_box_ttl">Квест паранормальное явление</h2>
+                            <section class="best_quest_box_details_holder">
+                                <span class="questinfo">
+                                    <i class="fa fa-info-circle"></i>
+                                    <small>Что будет если создать сверхчеловека?</small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questtime">
+                                    <i class="fa fa-clock-o fa-2x"></i>
+                                    <small class="xtra_padding_rite"><span class="not_that_small">60</span> мин.</small>
+                                    <i class="fa fa-users"></i>
+                                    <span class="not_that_small">2 - 4</span>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questphone">
+                                    <i class="fa fa-phone"></i>
+                                    <small>8 (495) 377 29 18, 8 (499) 638 12 54</small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questaddress">
+                                    <i class="fa fa-map-marker"></i>
+                                    <small>г. Москва, Варшавское Шоссе 69, д. 133</small>
+                                </span>
+                                <button class="btn btn-default q_box_reserve_btn">Забронировать</button>
+                            </section>
+
+                        </div>
+                    </div> <!-- Bestquest box END -->
+
+                    <div class="best_quest_box quest_2 col-sm-6" style="background: url('img/mainslide_002.jpg') center center no-repeat; background-size: cover;">
+                        <span class="color_splash purple" style="background: url('img/purple_splash.png') left no-repeat; background-size: contain;"></span>
+                        <div class="best_quest_box_info_holder">
+                            <h2 class="best_quests_box_ttl">Квест запретный эксперимент</h2>
+                            <section class="best_quest_box_details_holder">
+                                <span class="questinfo">
+                                    <i class="fa fa-info-circle"></i>
+                                    <small>
+                                        Для тех, кто не боится оказаться в полной темноте,
+                                        для тех, кто любит таинства...
+                                    </small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questtime">
+                                    <i class="fa fa-clock-o fa-2x"></i>
+                                    <small class="xtra_padding_rite"><span class="not_that_small">60</span> мин.</small>
+                                    <i class="fa fa-users"></i>
+                                    <span class="not_that_small">1 - 2</span>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questphone">
+                                    <i class="fa fa-phone"></i>
+                                    <small>8 (495) 577 23 38, 8 (495) 555 32 19</small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questaddress">
+                                    <i class="fa fa-map-marker"></i>
+                                    <small>м. Преображенская Площадь, ул. Электрозаводская 666, д. 13, склад 909</small>
+                                </span>
+                                <button class="btn btn-default q_box_reserve_btn">Забронировать</button>
+                            </section>
+
+                        </div>
+                    </div> <!-- Bestquest box END -->
+
+                    <div class="best_quest_box quest_3 col-sm-6" style="background: url('img/mainslide_003.jpg') center center no-repeat; background-size: cover;">
+                        <span class="color_splash orange" style="background: url('img/orange_splash.png') left no-repeat; background-size: contain;"></span>
+                        <div class="best_quest_box_info_holder">
+                            <h2 class="best_quests_box_ttl">Цитадель 171</h2>
+                            <section class="best_quest_box_details_holder">
+                                <span class="questinfo">
+                                    <i class="fa fa-info-circle"></i>
+                                    <small>
+                                        Для тех, кто не представляет свою жизнь без головоломок и синтетических препаратов
+                                    </small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questtime">
+                                    <i class="fa fa-clock-o fa-2x"></i>
+                                    <small class="xtra_padding_rite"><span class="not_that_small">80</span> мин.</small>
+                                    <i class="fa fa-users"></i>
+                                    <span class="not_that_small">2 - 5</span>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questphone">
+                                    <i class="fa fa-phone"></i>
+                                    <small>8 (495) 327 21 99, 8 (499) 390 20 59</small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questaddress">
+                                    <i class="fa fa-map-marker"></i>
+                                    <small>с. Победное, заброшеное здание сельского клуба (рядом со сгоревшим комбайном)</small>
+                                </span>
+                                <button class="btn btn-default q_box_cumin_soon_btn">Скоро</button>
+                            </section>
+
+                        </div>
+                    </div> <!-- Bestquest box END -->
+
+                    <div class="best_quest_box quest_4 col-sm-6" style="background: url('img/mainslide_004.jpg') center center no-repeat; background-size: cover;">
+                        <span class="color_splash green" style="background: url('img/green_splash.png') left no-repeat; background-size: contain;"></span>
+                        <div class="best_quest_box_info_holder">
+                            <h2 class="best_quests_box_ttl">Квест запретный эксперимент</h2>
+                            <section class="best_quest_box_details_holder">
+                                <span class="questinfo">
+                                    <i class="fa fa-info-circle"></i>
+                                    <small>
+                                        Нравится черная магия, общение с духами предков и параллельным миром? Вам сюда...
+                                    </small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questtime">
+                                    <i class="fa fa-clock-o fa-2x"></i>
+                                    <small class="xtra_padding_rite"><span class="not_that_small">120</span> мин.</small>
+                                    <i class="fa fa-users"></i>
+                                    <span class="not_that_small">2 - 4</span>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questphone">
+                                    <i class="fa fa-phone"></i>
+                                    <small>8 (195) 227 22 39, 8 (239) 110 50 81</small>
+                                </span>
+                                <div class="clearfix"></div>
+                                <span class="questaddress">
+                                    <i class="fa fa-map-marker"></i>
+                                    <small>г. Москва, ул. Державина 73, Бизнес-Центр "Оракул", 6 этаж, офис 13</small>
+                                </span>
+                                <button class="btn btn-default q_box_reserve_btn">Забронировать</button>
+                            </section>
+
+                        </div>
+                    </div> <!-- Bestquest box END -->
+
+                </div> <!-- Best quests box holder END -->
+            </div>
+        </div>
+
+    </div> <!-- Best reality quests area END  -->
+
+    <div class="quests_howto_area">
+        <div class="uppermmost_blu"></div>
+        <div class="container">
+            <div class="row">
+                <div class="howto_slides_holder">
+
+                    <div class="col-md-3 col-md-offset-0 col-sm-6 quest_howto_holder">
+                        <section class="howto_image howto_01" style="background: url('img/howto_001.jpg') center center no-repeat; background-size: cover;"></section>
+                        <h3 class="howto_ttl">что такое квесты</h3>
+                        <p class="howto_info">
+                            Квесты в реальности - это новый формат развлечений. Если Вы любите головоломки, загадки,
+                            острые ощущения и не боитесь трудностей, то Вы легко справитесь с квестом. Главное ваше
+                            оружие - интеллект, логика и внимательность.
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-md-offset-1 col-sm-6 quest_howto_holder">
+                        <section class="howto_image howto_02" style="background: url('img/howto_002.jpg') center center no-repeat; background-size: cover;"></section>
+                        <h3 class="howto_ttl">Как играть в квесты</h3>
+                        <p class="howto_info">
+                            Участвовать в квесте лучше командой от 2 до 4 человек. Преимущество квестов в
+                            реальности - это активное участие в процессе игры всех игроков. Все что требуется -
+                            это позитивный настрой, слаженность в действиях и внимательность.
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-md-offset-1 col-sm-6 col-sm-offset-3 quest_howto_holder">
+                        <section class="howto_image howto_03" style="background: url('img/howto_003.jpg') center center no-repeat; background-size: cover;"></section>
+                        <h3 class="howto_ttl">Забронировать квест</h3>
+                        <p class="howto_info">
+                            Для бронирования квеста необходимо выбрать квест, удобный для Вас день и время игры,
+                            заполнить заявку. Указать имя и контактный номер для связи. Команда Adrenaline24 работает
+                            ежедневно, 24 часа в сутки. Доступны все способы оплаты!
+                        </p>
+                    </div>
+
+                </div> <!-- Howto slider holder END -->
+            </div>
+        </div>
+        <div class="bottommost_orange"></div>
+    </div> <!-- Quests How To area END -->
+
+    <div class="fdbk_n_recommend_area">
+        <div class="container">
+            <div class="row">
+                <h2 class="recommend_ttl">Нас рекомендуют</h2>
+                <ul class="recommenders">
+                    <li><a href="http://questheroes.ru"><img src="img/recommended_01.png" class="recommended_logo hvr-grow"></a> </li>
+                    <li><a href="http://questguild.ru"><img src="img/recommended_02.png" class="recommended_logo hvr-grow"></a> </li>
+                    <div class="clearfix visible-xs"></div>
+                    <li><a href="http://questme.ru"><img src="img/recommended_03.png" class="recommended_logo hvr-grow"></a> </li>
+                    <li><a href="http://questhunt.ru"><img src="img/recommended_04.png" class="recommended_logo hvr-grow"></a> </li>
+                </ul>
+
+                <h2 class="recommend_ttl">Отзывы</h2>
+
+                <div class="fdbk_sldr">
+
+                    <div class="fdbk_holder">
+                        <img src="img/fdbk_01.jpg" class="fdbk_person_pic">
+                        <p class="fdbk_itself">
+                            Ребята,это наш самый первый квест.Понравилось больше, чем Клаустрофобия.
+                            Рекомендуем. Хотя до конца всё и не решили.
+                        </p>
+                        <h5 class="fdbk_name">Андрей Самохин</h5>
+                        <small class="fdbk_position">Разработчик ПО, Microsoft</small>
+                    </div>
+
+                    <div class="fdbk_holder">
+                        <img src="img/fdbk_02.jpg" class="fdbk_person_pic">
+                        <p class="fdbk_itself">
+                            Комната интересно выполнена, чем-то напоминает первую локацию в
+                            старой доброй Silent Hill )))
+                        </p>
+                        <h5 class="fdbk_name">Марина Нестерова</h5>
+                        <small class="fdbk_position">Переводчик, ООО "Перигелий"</small>
+                    </div>
+
+                    <div class="fdbk_holder">
+                        <img src="img/fdbk_03.jpg" class="fdbk_person_pic">
+                        <p class="fdbk_itself">
+                            Очень интересно было в квесте запретный эксперимент, но когда чувак в маске
+                            схватил меня за ногу, я чуть не описалась от страха )))
+                        </p>
+                        <h5 class="fdbk_name">Тамара Конева</h5>
+                        <small class="fdbk_position">Стюардесса, S7</small>
+                    </div>
+
+                    <div class="fdbk_holder">
+                        <img src="img/fdbk_04.jpg" class="fdbk_person_pic">
+                        <p class="fdbk_itself">
+                            Супер квесты, мы с друзьями здорово оттянулись на выходных! Очень реалистично сделано,
+                            такое ощущение, что попал в жуткий хоррор. Адреналин на уровне!
+                        </p>
+                        <h5 class="fdbk_name">Леонид Прохоров</h5>
+                        <small class="fdbk_position">Аналитик, Альфа-Банк</small>
+                    </div>
+
+                    <div class="fdbk_holder">
+                        <img src="img/fdbk_05.jpg" class="fdbk_person_pic">
+                        <p class="fdbk_itself">
+                            Супер игра, повеселился и получил неплохую надбавку к пенсии! Просто надо было стоять
+                            в углу и притворяться мумией! Буду играть ещё!!!
+                        </p>
+                        <h5 class="fdbk_name">Мухтар Гаремов</h5>
+                        <small class="fdbk_position">Сторож, Московский Музей Антропологии</small>
+                    </div>
+
+                    <div class="fdbk_holder">
+                        <img src="img/fdbk_06.jpg" class="fdbk_person_pic">
+                        <p class="fdbk_itself">
+                            Я и не думала, что мне так понравиться! Друзья еле уговорили меня пойти с ними на "Паранормальное
+                            Явление", теперь жду не дождусь когда снова будем играть!
+                        </p>
+                        <h5 class="fdbk_name">Алина Черемезова</h5>
+                        <small class="fdbk_position">Маркетолог, МТС</small>
+                    </div>
+
+                    <div class="fdbk_holder">
+                        <img src="img/fdbk_07.jpg" class="fdbk_person_pic">
+                        <p class="fdbk_itself">
+                            Хорошый квест был на алюминиевом заводе в Усть-Каменогорске. Отлично повеселился и
+                            угадал несколько сверхтрудных головоломок! Я молодец!
+                        </p>
+                        <h5 class="fdbk_name">Олег Дерипаска</h5>
+                        <small class="fdbk_position">Олигарх, Базовый Элемент</small>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- Feedback & Recommendation area END -->
+
+    <div class="map_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="map_holder">
+                    <div id="map" style="width:100%; height:440px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottommost_blu_4_map"></div>
+    </div> <!-- Map area END -->
+
+    <div class="contacts_area">
+        <div class="container">
+            <div class="row">
+                <h2 class="contacts_ttl">Остались вопросы?</h2>
+                <form id="main_contact_form" role="form">
+                    <div class="form-group col-sm-6">
+                        <fieldset>
+                            <input type="text" class="form-control adre24_input" name="name" placeholder="Ваше имя" onfocus="placeholder='' " onblur="placeholder='Ваше имя' ">
+                            <input type="text" class="form-control adre24_input" name="email" placeholder="Ваше мейл" onfocus="placeholder='' " onblur="placeholder='Ваше мейл' ">
+                        </fieldset>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <fieldset>
+                            <textarea class="form-control adre24_message" rows="4"></textarea>
+                        </fieldset>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <fieldset>
+                            <button class="btn btn-default submit_form_btn center-block hvr-rectangle-out_2">Отправить</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> <!-- Contacts area END -->
+
+    <footer class="adre24_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 footer_leftside">
+                    <small>Copyright &copy; 2016 adrenaline 24 llc. all rights reserved </small>
+                </div>
+                <div class="col-sm-6 footer_riteside">
+                    <ul class="socialize">
+                        <li><a href="#"><i class="fa fa-youtube"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i> </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+</div> <!-- Main END -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- JS Files -->
+<script type="text/javascript">
+    ymaps.ready(function () {
+        var adrenaline24Map = new ymaps.Map('map', {
+                    center: [55.763321, 37.780069],
+                    zoom: 15
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                myPlacemark = new ymaps.Placemark(adrenaline24Map.getCenter(), {
+                    hintContent: 'Ждем вас здесь!',
+                    balloonContent: 'Ку-ку! Поиграем?'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/logo-4-map.png',
+                    iconImageSize: [160, 61],
+                    iconImageOffset: [-3, -42]
+                });
+
+        adrenaline24Map.geoObjects.add(myPlacemark);
+    });
+</script>
+
+<script src="slick-1.5.9/slick/slick.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/_adrenaline.js"></script>
+<script src="js/select2.full.js"></script>
+<script type="text/javascript">
+
+    $('#lang_selekta, #lang_selekta_homepage').select2({
+        width: '100%',
+        minimumResultsForSearch: -1
+    });
+
+</script>
+</body>
+</html>

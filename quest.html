@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=1024, user-scalable = no">-->
+    <title>Adrenaline 24 (Квест Паранормальное Явление)</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,300,600,600italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick-theme.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/_adrenaline.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/schedule.css" rel="stylesheet">
+    <link href="css/_mq.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+</head>
+<body id="home">
+<div class="main">
+
+    <!-- Quest Order Modal -->
+    <div id="adrenaline_order_modal" class="modal fade "  tabindex="-1" role="dialog" aria-labelledby="adr24Modal">
+        <div class="modal-dialog adr24_order_quest" role="document">
+            <div class="modal-content adr24_modal_cntnt">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i> </button>
+                <span class="color_splash_modal" style="background: url('img/lilac_splash.png') left no-repeat; background-size: contain;"></span>
+                <div class="modal-body">
+                    <h2 class="modal_order_ttl center-block">Бронирование Квеста</h2>
+                    <h5 class="modal_schedule center-block">Начало сеанса: <span class="modal_session_date">29 февраля</span>, <span class="modal_session_time">12:00</span></h5>
+                    <div class="col-sm-6 modal_quest_poster_leftside">
+                        <h2 class="modal_quest_poster_ttl">Квест паранормальное явление</h2>
+                    </div>
+                    <span class="mystic_separator_modal"></span>
+                    <div class="col-sm-6 modal-quest_poster-riteside">
+                        <span class="questinfo_modal">
+                                <i class="fa fa-info-circle"></i>
+                                <small>Что будет если создать сверхчеловека?</small>
+                            </span>
+                        <div class="clearfix"></div>
+                            <span class="questtime_modal">
+                                <i class="fa fa-clock-o fa-2x"></i>
+                                <small class="xtra_padding_rite"><span class="not_that_small">60</span> мин.</small>
+                                <i class="fa fa-users"></i>
+                                <span class="not_that_small">2 - 4</span>
+                            </span>
+                        <div class="clearfix"></div>
+                            <span class="questphone_modal">
+                                <i class="fa fa-phone"></i>
+                                <small>8 (495) 377 29 18, 8 (499) 638 12 54</small>
+                            </span>
+                        <div class="clearfix"></div>
+                            <span class="questaddress_modal">
+                                <i class="fa fa-map-marker"></i>
+                                <small>г. Москва, Варшавское Шоссе 69, д. 133</small>
+                            </span>
+                    </div>
+                </div>
+                <div class="modal_order_cancel_holder col-sm-4 pull-left">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Отменить</button>
+                </div>
+                <div class="modal_order_confirm_holder col-sm-4 pull-right">
+                    <button class="btn btn-default modal_order_pay_btn">Оплатить</button>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Quest Order Modal END -->
+
+    <div class="inner_header_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="topmost_orange"></div>
+                <span class="color_splash_inner" style="background: url('img/lilac_splash.png') left no-repeat; background-size: contain;"></span>
+
+                <div class="tint">
+                    <div class="inner_header_pic_holder"></div>
+                </div>
+
+                <nav class="navbar navbar-default adrenav_inner">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#adrenav_inner_collapse" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand adrena_brand" href="#">
+                                <img src="img/main_logo.png" class="adr24_main_logo_inner animated lightSpeedIn">
+                                <span class="country_flag" style="background: url('img/rusflag.png') center center no-repeat; background-size: cover;"></span>
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="adrenav_inner_collapse">
+                            <ul class="nav navbar-nav adrenav_inner">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Правила</a></li>
+                                <li><a href="#">Сертификаты</a></li>
+                                <!--<li><a href="#">Паранормальное<br class="hidden-xs"> явление</a></li>-->
+                                <!--<li><a href="#">Запретный<br class="hidden-xs"> эксперимент</a></li>-->
+                                <li><a href="#">Франшиза</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <!--<li><a href="#">Профиль</a></li>-->
+                            </ul>
+                            <div class="navbar-right authorize_holder">
+                                <a href="#" class="btn btn-default authorize_me_btn">Авторизоваться</a>
+                                <div class="language_picker_holder">
+                                    <select id="lang_selekta">
+                                        <option>РУС</option>
+                                        <option>ENG</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="quest_inner_poster ">
+                            <section class="col-md-3 col-md-offset-2 col-sm-6 quest_inner_info_leftside">
+                                <h2 class="quest_inner_ttl">Квест паранормальное явление</h2>
+                            </section>
+                            <span class="mystic_separator"></span>
+                            <section class="col-md-offset-1 col-md-5 col-sm-6 quest_inner_info_riteside">
+                            <span class="questinfo_inner">
+                                <i class="fa fa-info-circle"></i>
+                                <small>Что будет если создать сверхчеловека?</small>
+                            </span>
+                                <div class="clearfix"></div>
+                            <span class="questtime_inner">
+                                <i class="fa fa-clock-o fa-2x"></i>
+                                <small class="xtra_padding_rite"><span class="not_that_small">60</span> мин.</small>
+                                <i class="fa fa-users"></i>
+                                <span class="not_that_small">2 - 4</span>
+                            </span>
+                                <div class="clearfix"></div>
+                            <span class="questphone_inner">
+                                <i class="fa fa-phone"></i>
+                                <small>8 (495) 377 29 18, 8 (499) 638 12 54</small>
+                            </span>
+                                <div class="clearfix"></div>
+                            <span class="questaddress_inner">
+                                <i class="fa fa-map-marker"></i>
+                                <small>г. Москва, Варшавское Шоссе 69, д. 133</small>
+                            </span>
+                                <div class="clearfix"></div>
+                                <section class="order_button_inner_holder">
+                                    <a id="quest_order" href="#schedule" class="btn btn-default order_quest_btn">Забронировать</a>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottommost_blu_inner"></div>
+    </div> <!-- Inner header area END -->
+
+    <div class="inner_info_stripe_area">
+        <div class="container">
+            <div class="row">
+                <h2 class="info_stripe_ttl">Инфо</h2>
+                <p class="infostripe">
+                    Квесты в реальности сравнимы с прохождением компьютерной игры, только Вы находитесь
+                    внутри самой игры - все можно потрогать, почувствовать, получить незабываемые яркие
+                    впечатления. Для прохождения квеста Вам необходимо проявить смекалку, неординарное мышление,
+                    внимательность к деталям. Попробуйте, Вам понравится. Квесты в реальности сравнимы с прохождением
+                    компьютерной игры, только Вы находитесь внутри самой игры - все можно потрогать, почувствовать,
+                    получить незабываемые яркие впечатления. Для прохождения квеста Вам необходимо проявить смекалку,
+                    неординарное мышление, внимательность к деталям. Попробуйте, Вам понравится.
+                </p>
+                <div class="photostripe_holder">
+                    <div class="col-sm-4 photostripe_recangle" style="background: url('img/q1.jpg') center center no-repeat; background-size: cover;"></div>
+                    <div class="col-sm-4 photostripe_recangle" style="background: url('img/q2.jpg') center center no-repeat; background-size: cover;"></div>
+                    <div class="col-sm-4 photostripe_recangle" style="background: url('img/q3.jpg') center center no-repeat; background-size: cover;"></div>
+                </div>
+                <div class="clearfix visible-sm"></div>
+                <p class="infostripe">
+                    Для прохождения квеста Вам необходимо проявить смекалку, неординарное мышление, внимательность к
+                    деталям. Попробуйте, Вам понравится. Квесты в реальности сравнимы с прохождением компьютерной игры,
+                    только Вы находитесь внутри самой игры - все можно потрогать, почувствовать, получить незабываемые
+                    яркие впечатления.
+                </p>
+                <hr class="infostripe_separator">
+                <div class="container participants_holder">
+                    <h2 class="participants_ttl">Участники</h2>
+                    <div class="participant_img_box">
+                        <img src="img/prtcpnt_test_400.jpg" class="img-responsive">
+                        <small>Леонид Писарев</small>
+                    </div>
+                    <div class="participant_img_box">
+                        <img src="img/prtcpnt_04.jpg" class="img-responsive">
+                        <small>Оксана Блэк</small>
+                    </div>
+                    <div class="participant_img_box">
+                        <img src="img/prtcpnt_bulk_male.jpg" class="img-responsive">
+                        <small>Тимур Карасаев</small>
+                    </div>
+                    <div class="participant_img_box">
+                        <img src="img/prtcpnt_02.jpg" class="img-responsive">
+                        <small>Артур Черненко</small>
+                    </div>
+                    <div class="participant_img_box">
+                        <img src="img/prtcpnt_bulk_female.jpg" class="img-responsive">
+                        <small>Мария Арбузова</small>
+                    </div>
+                </div>
+                <hr class="infostripe_separator">
+                <div id="schedule" class="schedule_holder">
+                    <h2 class="participants_ttl">Расписание</h2>
+                    <div class="schdl_holder">
+                        <section class="well schdl_daily_box">
+                            <span class="schdl_date_n_week">
+                                <h4>1 Февраля</h4>
+                                <small>Понедельник</small>
+                            </span>
+                            <section class="time_stripe">
+                                <a class="btn questime available" data-toggle="modal" data-target="#adrenaline_order_modal">13:00</a>
+                                <a href="#" class="btn questime available">15:00</a>
+                                <a href="#" class="btn questime available">17:00</a>
+                                <a href="#" class="btn questime unavailable">19:00</a>
+                                <a href="#" class="btn questime unavailable">21:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                            </section>
+                            <section class="price_stripe">
+                                <span class="questprice three_days_long">2000 Р</span>
+                                <span class="questprice three_days_long">2500 Р</span>
+                            </section>
+                        </section>
+
+                        <section class="well schdl_daily_box">
+                            <span class="schdl_date_n_week">
+                                <h4>2 Февраля</h4>
+                                <small>Вторник</small>
+                            </span>
+                            <section class="time_stripe">
+                                <a href="#" class="btn questime available">07:30</a>
+                                <a href="#" class="btn questime unavailable">15:00</a>
+                                <a href="#" class="btn questime unavailable">17:00</a>
+                                <a href="#" class="btn questime unavailable">19:00</a>
+                                <a href="#" class="btn questime unavailable">21:00</a>
+                                <a href="#" class="btn questime unavailable">23:00</a>
+                                <a href="#" class="btn questime available">01:00</a>
+                            </section>
+                            <section class="price_stripe">
+                                <span class="questprice one_day_long">100 Р</span>
+                                <span class="questprice two_days_long">2000 Р</span>
+                                <span class="questprice three_days_long">2500 Р</span>
+                                <span class="questprice one_day_long">5000 Р</span>
+                            </section>
+                        </section>
+
+                        <section class="well schdl_daily_box">
+                            <span class="schdl_date_n_week">
+                                <h4>3 Февраля</h4>
+                                <small>Среда</small>
+                            </span>
+                            <section class="time_stripe">
+                                <a href="#" class="btn questime unavailable">13:00</a>
+                                <a href="#" class="btn questime available">15:00</a>
+                                <a href="#" class="btn questime available">17:00</a>
+                                <a href="#" class="btn questime unavailable">19:00</a>
+                                <a href="#" class="btn questime unavailable">21:00</a>
+                                <a href="#" class="btn questime available">23:00</a>
+                                <a href="#" class="btn questime unavailable">00:00</a>
+                            </section>
+                            <section class="price_stripe">
+                                <span class="questprice three_days_long">2000 Р</span>
+                                <span class="questprice two_days_long">2500 Р</span>
+                                <span class="questprice two_days_long">2500 Р</span>
+                            </section>
+                        </section>
+
+                        <section class="well schdl_daily_box">
+                            <span class="schdl_date_n_week">
+                                <h4>4 Февраля</h4>
+                                <small>Четверг</small>
+                            </span>
+                            <section class="time_stripe">
+                                <a href="#" class="btn questime available">13:00</a>
+                                <a href="#" class="btn questime available">15:00</a>
+                                <a href="#" class="btn questime unavailable">17:00</a>
+                                <a href="#" class="btn questime available">19:00</a>
+                                <a href="#" class="btn questime available">21:00</a>
+                                <a href="#" class="btn questime available">23:00</a>
+                                <a href="#" class="btn questime unavailable">00:00</a>
+                            </section>
+                            <section class="price_stripe">
+                                <span class="questprice one_day_long">2000 Р</span>
+                                <span class="questprice two_days_long">2500 Р</span>
+                                <span class="questprice one_day_long">2500 Р</span>
+                                <span class="questprice three_days_long">2500 Р</span>
+                            </section>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="map_holder">
+                    <div id="map" style="width:100%; height:440px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottommost_blu_4_map"></div>
+    </div> <!-- Map area END -->
+
+    <div class="contacts_area">
+        <div class="container">
+            <div class="row">
+                <h2 class="contacts_ttl">Остались вопросы?</h2>
+                <form id="main_contact_form" role="form">
+                    <div class="form-group col-sm-6">
+                        <fieldset>
+                            <input type="text" class="form-control adre24_input" name="name" placeholder="Ваше имя" onfocus="placeholder='' " onblur="placeholder='Ваше имя' ">
+                            <input type="text" class="form-control adre24_input" name="email" placeholder="Ваше мейл" onfocus="placeholder='' " onblur="placeholder='Ваше мейл' ">
+                        </fieldset>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <fieldset>
+                            <textarea class="form-control adre24_message" rows="4"></textarea>
+                        </fieldset>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <fieldset>
+                            <button class="btn btn-default submit_form_btn center-block hvr-rectangle-out_2">Отправить</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> <!-- Contacts area END -->
+
+    <footer class="adre24_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 footer_leftside">
+                    <small>Copyright &copy; 2016 adrenaline 24 llc. all rights reserved </small>
+                </div>
+                <div class="col-sm-6 footer_riteside">
+                    <ul class="socialize">
+                        <li><a href="#"><i class="fa fa-youtube"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i> </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</div> <!-- Main END -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- JS Files -->
+<script type="text/javascript">
+    ymaps.ready(function () {
+        var adrenaline24Map = new ymaps.Map('map', {
+                    center: [55.763321, 37.780069],
+                    zoom: 15
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                myPlacemark = new ymaps.Placemark(adrenaline24Map.getCenter(), {
+                    hintContent: 'Ждем вас здесь!',
+                    balloonContent: 'Ку-ку! Поиграем?'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/logo-4-map.png',
+                    iconImageSize: [160, 61],
+                    iconImageOffset: [-3, -42]
+                });
+
+        adrenaline24Map.geoObjects.add(myPlacemark);
+    });
+</script>
+
+<script src="slick-1.5.9/slick/slick.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/_adrenaline.js"></script>
+<script src="js/select2.full.js"></script>
+<script type="text/javascript">
+
+    $('#lang_selekta').select2({
+        width: '100%',
+        minimumResultsForSearch: -1
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=1024, user-scalable = no">-->
+    <title>Adrenaline 24 (Выбор Локаций)</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,300,600,600italic,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.5.9/slick/slick-theme.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/_adrenaline.css" rel="stylesheet">
+    <link href="css/_mq.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+</head>
+<body id="home">
+<div class="main">
+
+    <div class="inner_header_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="topmost_orange"></div>
+
+                <div class="tint">
+                    <div class="sub_inner_header_pic_holder"></div>
+                </div>
+
+                <nav class="navbar navbar-default adrenav_inner">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#adrenav_inner_collapse" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand adrena_brand" href="#">
+                                <img src="img/main_logo.png" class="adr24_main_logo_inner animated lightSpeedIn">
+                                <span class="country_flag" style="background: url('img/rusflag.png') center center no-repeat; background-size: cover;"></span>
+                            </a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="adrenav_inner_collapse">
+                            <ul class="nav navbar-nav adrenav_inner">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Правила</a></li>
+                                <li><a href="#">Сертификаты</a></li>
+                                <!--<li><a href="#">Паранормальное<br class="hidden-xs"> явление</a></li>-->
+                                <!--<li><a href="#">Запретный<br class="hidden-xs"> эксперимент</a></li>-->
+                                <li><a href="#">Франшиза</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <!--<li><a href="#">Профиль</a></li>-->
+                            </ul>
+                            <div class="navbar-right authorize_holder">
+                                <a href="#" class="btn btn-default authorize_me_btn">Авторизоваться</a>
+                                <div class="language_picker_holder">
+                                    <select id="lang_selekta">
+                                        <option>РУС</option>
+                                        <option>ENG</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+            </div>
+        </div>
+        <div class="bottommost_blu_inner"></div>
+    </div> <!-- Inner header area END -->
+
+    <div class="inner_locations_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="countryboxx">
+                    <span id="russia" class="location_countryflag" style="background: url('img/rusflag.png') center center no-repeat; background-size: cover;"></span>
+                    <h5 class="location_country_ttl">Россия</h5>
+                    <div class="location_map">
+                        <div id="map_ru" style="width:100%; height:340px"></div>
+                        <div class="bottommost_blu_4_map_2"></div>
+                    </div>
+
+                    <section class="city_subsection">
+                        <a href="#" class="gotocity">Москва</a>
+                        <small class="location_count">(3 локации)</small>
+                    </section>
+                </div>
+
+                <hr class="maps_separator">
+
+                <div class="countryboxx">
+                    <span id="israel" class="location_countryflag" style="background: url('img/israelflag.png') center center no-repeat; background-size: cover;"></span>
+                    <h5 class="location_country_ttl">Израиль</h5>
+                    <div class="location_map">
+                        <div id="map_il" style="width:100%; height:340px"></div>
+                        <div class="bottommost_blu_4_map_2"></div>
+                    </div>
+
+                    <section class="city_subsection">
+                        <a href="#" class="gotocity">Тель-Авив</a>
+                        <small class="location_count">(2 локации)</small>
+                    </section>
+                </div>
+
+                <hr class="maps_separator">
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="adre24_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 footer_leftside">
+                    <small>Copyright &copy; 2016 adrenaline 24 llc. all rights reserved </small>
+                </div>
+                <div class="col-sm-6 footer_riteside">
+                    <ul class="socialize">
+                        <li><a href="#"><i class="fa fa-youtube"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i> </a> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</div> <!-- Main END -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- JS Files -->
+<script type="text/javascript">
+    ymaps.ready(function () {
+        var adrenaline24Map = new ymaps.Map('map_ru', {
+                    center: [55.763321, 37.780069],
+                    zoom: 12
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                myPlacemark = new ymaps.Placemark([55.776472, 37.657727], {
+                    hintContent: 'Квест "Бешенный Электровоз" ',
+                    balloonContent: ''
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/adr24_location_point.png',
+                    iconImageSize: [35, 35],
+                    iconImageOffset: [-3, -42]
+                }),
+                myPlacemark1 = new ymaps.Placemark([55.761132, 37.70585], {
+                    hintContent: 'Квест "Лефортовский Петух" ',
+                    balloonContent: ''
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/adr24_location_point.png',
+                    iconImageSize: [35, 35],
+                    iconImageOffset: [-3, -42]
+                }),
+                myPlacemark2 = new ymaps.Placemark([55.780436, 37.799553], {
+                    hintContent: 'Квест "Синтетика" ',
+                    balloonContent: ''
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/adr24_location_point.png',
+                    iconImageSize: [35, 35],
+                    iconImageOffset: [-3, -42]
+                });
+
+        adrenaline24Map.controls
+                .add('zoomControl', { left: 5, top: 5 });
+
+        adrenaline24Map.geoObjects.add(myPlacemark);
+        adrenaline24Map.geoObjects.add(myPlacemark1);
+        adrenaline24Map.geoObjects.add(myPlacemark2);
+    });
+
+
+    ymaps.ready(function () {
+        var adrenaline24Map = new ymaps.Map('map_il', {
+                    center: [32.08526, 34.790125],
+                    zoom: 11
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                myPlacemark = new ymaps.Placemark(adrenaline24Map.getCenter(), {
+                    hintContent: 'Квест "קוננילינגוס" ',
+                    balloonContent: ''
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/adr24_location_point.png',
+                    iconImageSize: [35, 35],
+                    iconImageOffset: [-3, -42]
+                }),
+                myPlacemark1 = new ymaps.Placemark([32.013877, 34.74874], {
+                    hintContent: 'Квест "צוריק אין די מעסאָזאָיק" ',
+                    balloonContent: ''
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/adr24_location_point.png',
+                    iconImageSize: [35, 35],
+                    iconImageOffset: [-3, -42]
+                });
+
+        adrenaline24Map.controls
+                .add('zoomControl', { left: 5, top: 5 });
+
+        adrenaline24Map.geoObjects.add(myPlacemark);
+        adrenaline24Map.geoObjects.add(myPlacemark1);
+    });
+
+</script>
+
+<script src="slick-1.5.9/slick/slick.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/_adrenaline.js"></script>
+<script src="js/select2.full.js"></script>
+<script type="text/javascript">
+
+    $('#lang_selekta').select2({
+        width: '100%',
+        minimumResultsForSearch: -1
+    });
+
+</script>
+
+</body>
+</html>

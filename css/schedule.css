@@ -1,0 +1,210 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~ Schedule section styles ~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.schdl_holder {
+    display: inline-block;
+    /*overflow-y: scroll;*/
+    width: 100%;
+    height: auto;
+    padding: 10px 0 30px 0;
+}
+
+.well.schdl_daily_box {
+    display: inline-block;
+    padding: 8px 12px 8px 12px;
+    background-color: #2b3043;
+    border: none;
+    width: inherit;
+    max-width: inherit;
+}
+
+span.schdl_date_n_week {
+    padding-top: 4px;
+    display: block;
+    float: left;
+    color: #ffffff;
+    padding-right: 20px;
+}
+
+span.schdl_date_n_week h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+}
+
+span.schdl_date_n_week small {
+    color: #adafbd;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.time_stripe {
+    margin-bottom: 5px;
+}
+
+a.questime.available {
+    background-color: #f29b00;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    width: 4%;
+    padding: 4px;
+    margin-right: 0.3%;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+a.questime:hover {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+a.questime.unavailable {
+    background-color: #23283a;
+    color: #adafbd;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    width: 4%;
+    padding: 4px;
+    margin-right: 0.3%;
+    cursor: default;
+    pointer-events: none !important;
+}
+
+span.questprice.one_day_long {
+    display: inline-block;
+    background-color: #23283a;
+    color: #adafbd;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+    width: 4%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 0.3%;
+}
+
+span.questprice.two_days_long {
+    display: inline-block;
+    background-color: #23283a;
+    color: #adafbd;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    width: 8.5%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 0.3%;
+}
+
+span.questprice.three_days_long {
+    display: inline-block;
+    background-color: #23283a;
+    color: #adafbd;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    width: 13.3%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 0.3%;
+}
+
+
+/* Colorful Scroll */
+.schdl_holder::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+.schdl_holder::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+.schdl_holder::-webkit-scrollbar-thumb {
+    width: 12px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(242,155,0,0.8)
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+.schdl_holder::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(242,155,0,0.3)
+}
+
+
+
+
+/* ••••••••••••••••••••••••••••••••••• */
+/* ••••••••••••••••••••••••••••••••••• */
+/* ••••••••••••••••••••••••••••••••••• */
+/* > media queries for Schedule section < */
+/* ••••••••••••••••••••••••••••••••••• */
+/* ••••••••••••••••••••••••••••••••••• */
+/* ••••••••••••••••••••••••••••••••••• */
+
+
+/* ~~~ LG/XL ~~~ */
+
+
+
+
+
+
+/* ~~~ SM/XS ~~~ */
+
+@media screen and (max-width: 991px){
+    a.questime.available {font-size: 1rem; padding-left: 0; padding-right: 2px; margin-right: 0;}
+    a.questime.unavailable {font-size: 1rem; padding-left: 0; padding-right: 2px; margin-right: 0;}
+
+    span.questprice.one_day_long {font-size: 0.9rem; margin-right: 0;}
+    span.questprice.two_days_long {font-size: 0.9rem; margin-right: 0;}
+    span.questprice.three_days_long {font-size: 0.9rem; margin-right: 0;}
+
+}
+
+@media screen and (max-width: 800px){
+    /*a.questime.available, a.questime.unavailable {*/
+        /*margin-right: 0.2%;*/
+        /*font-size: 1.5rem;*/
+        /*padding-top: 3px;*/
+        /*padding-bottom: 3px;*/
+    /*}*/
+
+    .well.schdl_daily_box {width: 1200px;}
+    .schdl_holder {overflow-x: scroll;}
+
+    a.questime.available {font-size: 1.3rem; padding-left: 4px; padding-right: 4px; margin-right: 0.3%;}
+    a.questime.unavailable {font-size: 1.3rem; padding-left: 4px; padding-right: 4px; margin-right: 0.3%;}
+
+    span.questprice.one_day_long {font-size: 1.2rem; margin-right: 0.3%;}
+    span.questprice.two_days_long {font-size: 1.2rem; margin-right: 0.3%;}
+    span.questprice.three_days_long {font-size: 1.2rem; margin-right: 0.3%;}
+
+}
+
+@media screen and (max-width: 767px){
+    /*.well.schdl_daily_box {width: 850px;}*/
+    /*.schdl_holder {overflow-x: scroll;}*/
+}
